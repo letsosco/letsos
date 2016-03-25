@@ -1,0 +1,8 @@
+data/
+debug/
+deploy/
+*.js
+!*.min.js
+*.css
+!*.min.css
+*.map
