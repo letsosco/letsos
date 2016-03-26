@@ -3,7 +3,7 @@
         xmlns:gap     = "http://phonegap.com/ns/1.0"
         xmlns:android = "http://schemas.android.com/apk/res/android"        
         id            = "com.letsos.mobile"
-        version       = "1.4.9.1">
+        version       = "1.4.9.2">
   
   <name>Letsos Mobile</name>
   <description>Letsos Company Mobile App</description>
@@ -13,7 +13,7 @@
   <allow-navigation href="*" />
   <allow-intent href="*" />
 
-  <preference name="phonegap-version" value="cli-6.0.0" />
+  <preference name="phonegap-version" value="cli-5.2.0" />
   <preference name="AutoHideSplashScreen" value="false" />
   <preference name="SplashScreenDelay" value="10000"/>
 
