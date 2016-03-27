@@ -45,11 +45,11 @@
     </div>
 
     <!-- level 0. main view.  -->
-    <div id="vwMain" data-role="view" data-model="sv.vm" data-init="sv.ui.vwInit" data-show="sv.ui.vwShow" data-level="0">
+    <div id="vwMain" data-role="view" data-title="Active" data-model="sv.vm" data-init="sv.ui.vwInit" data-show="sv.ui.vwShow" data-level="0">
         <div data-role="header">
             <div data-role="navbar">
                 <a data-role="button" data-align="left" data-rel="drawer" href="#mainMenu" data-icon="drawer-a" class="ls-navmenu-btn">Menu</a>
-                <span data-role="view-title" data-bind="text: cont.viewTitle, style: { color: cont.titleColor }">Active</span>
+                <span data-role="view-title" data-bind="text: cont.viewTitle, style: { color: cont.titleColor }"></span>
                 <a data-role="button" data-align="right" data-icon="refresh" data-bind="click: sync">Sync</a>
             </div>
         </div>
