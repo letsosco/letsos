@@ -802,6 +802,7 @@
             <span class="k-icon k-i-pencil#= sv.helper.working(data) ? '' : ' ls-hidden2' #"></span>
             <span class="#= IsSelf ? (IsPri ? 'ls-itm': 'ls-itm2') : 'ls-state-disabled' #">
                 #= Ts ? sv.helper.fDate.dui(sv.helper.fDate.nd(Ts), 'MM/dd') : '0/0' #
+                #= PriEmpNo !== -1 ? '' : '<span class="ls-alert">(INVALID) </span>' #
                 <span class="ls-font-normal">#= Reason || '' #</span>
             </span>
         </a>
