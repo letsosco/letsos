@@ -13,11 +13,11 @@
   <allow-navigation href="*" />
   <allow-intent href="*" />
 
-  <preference name="phonegap-version" value="cli-5.2.0" />
+  <preference name="phonegap-version" value="cli-6.1.0" />
   <preference name="AutoHideSplashScreen" value="false" />
   <preference name="SplashScreenDelay" value="10000"/>
 
-  <plugin name="cordova-plugin-camera" spec="2.1.1" />
+  <plugin name="cordova-plugin-camera" spec="2.2.0" />
   <plugin name="cordova-plugin-device" spec="1.1.1" />
   <plugin name="cordova-plugin-file" spec="4.1.1" />
   <plugin name="cordova-plugin-file-transfer" spec="1.5.0" />
@@ -28,7 +28,7 @@
   <plugin name="cordova-plugin-statusbar" spec="2.1.2" />
   <plugin name="cordova-plugin-webintent2" spec="1.0.1" />
   <plugin name="cordova-plugin-whitelist" spec="1.2.1" />
-  <plugin name="phonegap-plugin-push" spec="1.5.3" />
+  <plugin name="phonegap-plugin-push" spec="1.6.3" />
   
   <platform name="ios">
     <preference name="iosPersistentFileLocation" value="Library" />
