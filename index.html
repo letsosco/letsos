@@ -91,7 +91,7 @@
                 <label>Cost Code<input name="nmCc" type="number" data-bind="value: wo.Cc, disabled: lock.jobcc, events: {change: jobCcChange}" placeholder="enter 0 if unknown" required data-required-msg="Cost Code is required" min="0" max="999999" data-max-msg="Cost Code is invalid" /></label>
             </li>
             <li>
-                <label><span data-bind="text: cont.custName">Cust./Job</span><input name="nmCustName" type="text" data-bind="value: wo.CustName, disabled: lock.disp" placeholder="required" /></label>
+                <label><span data-bind="text: cont.custName">Cust./Job</span><input name="nmCustName" type="text" data-bind="value: wo.CustName, disabled: lock.disp" placeholder="required" maxlength="100" /></label>
             </li>
             <li data-bind="visible: isDispJob">
                 <label>Contact<input type="text" data-bind="value: wo.Contact, disabled: lock.disp" /></label>
@@ -105,11 +105,11 @@
             <li data-bind="visible: isDispJob">
                 <label>
                     Rep <a data-role="button" data-icon="phone" data-bind="click: show.dialResp" class="ls-detail-btn"></a>
-                    <input type="text" data-bind="value: wo.Resp, disabled: lock.disp"/>
+                    <input type="text" data-bind="value: wo.Resp, disabled: lock.disp" maxlength="40" />
                 </label>
             </li>
             <li data-bind="visible: isDispJob">
-                <label>Cust. PO<input type="text" data-bind="value: wo.CustPo, disabled: isTktCmpSig" /></label>
+                <label>Cust. PO<input type="text" data-bind="value: wo.CustPo, disabled: isTktCmpSig" maxlength="50" /></label>
             </li>
         </ul>
         <ul data-role="listview" data-style="inset" data-type="group" data-bind="invisible: isExp">
@@ -255,7 +255,7 @@
             <div id="sigTop">
                 <ul data-role="listview" data-style="inset">
                     <li>
-                        <label>Contact<input name="Contact" type="text" class="name" placeholder="required" data-bind="value: wo.SigContact, disabled: isTktCmpSig" /></label>
+                        <label>Contact<input name="Contact" type="text" class="name" placeholder="required" data-bind="value: wo.SigContact, disabled: isTktCmpSig" maxlength="100" /></label>
                     </li>
                     <li>
                         <label>
