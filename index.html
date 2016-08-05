@@ -44,6 +44,11 @@
         </ul>
     </div>
 
+    <div data-role="drawer" id="pdSumMenu" data-model="sv.vm" data-views="['vwPdSum']" data-position="right">
+        <div class="km-group-title">EMPLOYEES</div>
+        <ul id="lstPdSumEmp" data-role="listview" data-template="tmPdSumEmp" data-bind="source: ds.pdSumEmpList, click: show.pdSum.refresh" data-selidx="0"></ul>
+    </div>
+
     <!-- level 0. main view.  -->
     <div id="vwMain" data-role="view" data-title="Active" data-model="sv.vm" data-init="sv.ui.vwInit" data-show="sv.ui.vwShow" data-level="0">
         <div data-role="header">
@@ -613,8 +618,8 @@
             </div>
         </header>
         <div id="srvImg"></div>
-        <a id="prev-img" data-role="button" data-icon="prev-a"></a>
-        <a id="next-img" data-role="button" data-icon="next-a"></a>
+        <a id="prev-img" class="ls-btnPrev" data-role="button" data-icon="prev-a"></a>
+        <a id="next-img" class="ls-btnPrev" data-role="button" data-icon="next-a"></a>
     </div>
 
     <!-- level 1 -->
@@ -653,9 +658,14 @@
     <div id="vwPdSum" data-role="view" data-title="Week Summary" data-model="sv.vm" data-init="sv.ui.vwInit" data-show="sv.ui.vwShow" data-level="1">
         <div data-role="header">
             <div data-role="navbar">
-                <a data-role="button" class="km-back" data-align="left" href="#vwMain">Back</a>
-                <span data-role="view-title">Weekly Summary</span>
+                <a data-role="button" class="km-back" data-align="left" data-bind="click: show.pdSum.backToMain">Back</a>
+                <span data-role="view-title"></span>
+                <a class="ls-navmenu-btn" data-role="button" data-align="right" data-rel="drawer" href="#pdSumMenu" data-icon="drawer-a" data-bind="visible: lock.pdsum.btns">Other</a>
             </div>
+        </div>
+        <div data-role="footer">
+            <a id="prev-pdsum" class="ls-btnPrev" data-role="button" data-icon="prev-a" data-bind="click: show.pdSum.refresh, visible: lock.pdsum.btns"></a>
+            <a id="next-pdsum" class="ls-btnNext" data-role="button" data-icon="next-a" data-bind="click: show.pdSum.refresh, visible: lock.pdsum.btns"></a>
         </div>
         <div id="wkTot" class="ls-tot"></div>
         <ul id="pdSumList"></ul>
@@ -880,6 +890,10 @@
             <li><a data-action="#= data[i].action #" class="#= data[i].css #">#= data[i].text + (data[i].note ? '<div class="ls-actsht-btn-note">' + data[i].note + '</div>' : '') #</a></li>
             # } #
         </ul>
+    </script>
+
+    <script type="text/x-kendo-template" id="tmPdSumEmp">
+        <a>#: EmpName #</a>
     </script>
 
     <script type="text/x-kendo-template" id="tmPdSum">
