@@ -31,13 +31,14 @@
                 <ul>
                     <li data-icon="na"><a data-bind="click: mainMenu.tgView">Toggle Active/Completed</a></li>
                     <li data-icon="search"><a href="#vwHist" data-transition="none">Search History</a></li>
-                    <li data-icon="add"><a data-bind="click: mainMenu.addTktL"class="ls-hl-mnu">Add Job Ticket</a></li>
+                    <li data-icon="add"><a data-bind="click: mainMenu.addTktL" class="ls-hl-mnu">Add Job Ticket</a></li>
                     <li data-icon="add"><a data-bind="click: mainMenu.addTktE">Expense Reimbursement</a></li>
                 </ul>
             </li>
             <li>
                 OTHER
                 <ul>
+                    <li data-icon="contacts"><a data-bind="click: mainMenu.techDir" data-transition="none">Directory</a></li>
                     <li data-icon="settings"><a href="#vwSetting" data-transition="none">App Settings</a></li>
                 </ul>
             </li>
@@ -499,7 +500,7 @@
                 </label>
             </li>
             <li>
-                <label>Name<input type="text" data-bind="value: labor.Name" disabled="disabled"/></label>
+                <label>Name<input type="text" data-bind="value: labor.Name" disabled="disabled" /></label>
                 <span data-bind="value: labor.No" class="ls-hidden"></span>
                 <a data-role="button" data-d="0" data-icon="more" data-bind="click: add.labors, invisible: lock.lbrSel" class="ls-detail-btn"></a>
                 <a data-role="button" data-icon="search" data-bind="click: show.techsearch, invisible: lock.dtl" class="ls-detail-btn ls-r-btn"></a>
@@ -582,7 +583,7 @@
                 <a data-role="button" data-align="right" data-click="sv.helper.toTop">To Top</a>
             </div>
         </header>
-        <ul id="toolSel" data-role="listview" data-bind="source: ds.toolsMulti" data-template="tmToolSel" data-header-template="tmToolSelHd" data-filterable="{ field: 'Desc', operator: 'contains' }" data-style="inset"></ul>
+        <ul id="toolSel" data-role="listview" data-bind="source: ds.toolsMulti" data-template="tmToolSel" data-header-template="tmToolSelHd" data-filterable="{ field: 'Desc', ignoreCase: true, operator: 'contains' }" data-style="inset"></ul>
     </div>
 
     <div id="vwLaborsE" data-role="view" data-title="Labors" data-model="sv.vm" data-init="sv.ui.vwInit" data-show="sv.ui.vwShow" data-level="4" data-transition="none">
@@ -594,7 +595,7 @@
             </div>
         </header>
         <div id="lbrSelTitleE" class="ls-tot2"></div>
-        <ul id="lbrSelE" class="ls-lbrSel" data-role="listview" data-bind="source: ds.laborsMultiE" data-template="tmLaborSel" data-header-template="tmLaborSelHd" data-style="inset" data-filterable="{ field: 'Name', operator: 'contains' }"></ul>
+        <ul id="lbrSelE" class="ls-lbrSel" data-role="listview" data-bind="source: ds.laborsMultiE" data-template="tmLaborSel" data-header-template="tmLaborSelHd" data-style="inset" data-filterable="{ field: 'Name', ignoreCase: true, operator: 'contains' }"></ul>
     </div>
 
     <div id="vwLaborsD" data-role="view" data-title="Labors" data-model="sv.vm" data-init="sv.ui.vwInit" data-show="sv.ui.vwShow" data-level="4">
@@ -747,6 +748,17 @@
         <ul id="lstTechCmtHist"></ul>
     </div>
 
+    <div id="vwTechDir" data-role="view" data-title="Directory" data-model="sv.vm" data-init="sv.ui.vwInit" data-show="sv.ui.vwShow" data-level="2">
+        <header data-role="header">
+            <div data-role="navbar">
+                <a data-role="backbutton" data-align="left">Back</a>
+                <span data-role="view-title"></span>
+                <a data-role="button" data-align="right" data-click="sv.helper.toTop">To Top</a>
+            </div>
+        </header>
+        <ul data-role="listview" data-source="sv.vm.ds.techlist" data-template="tmTechDir" data-style="inset" data-filterable="{ field: 'Name', ignoreCase: true, operator: 'contains' }"></ul>
+    </div>
+
     <div id="msgblk"><div></div></div>
     <select id="imgCatWo"></select>
 
@@ -781,7 +793,7 @@
             </div>
         </div>
         <div id="calculator">
-            <input type="text" id="panel" disabled="disabled"/>
+            <input type="text" id="panel" disabled="disabled" />
             <div class="keys">
                 <span class="clear">CLEAR</span>
                 <span class="operator"><<</span>
@@ -847,7 +859,8 @@
     </script>
 
     <script type="text/x-kendo-template" id="tmLaborHeader">
-        #= sv.helper.fDate.dui2(value) # # if (!sv.vm.isTktCmpSig() && value >= sv.helper.fDate.pd().validFrom) {# <a data-role="button" data-icon="add" data-click="sv.vm.add.labor" data-dftdate="#= sv.helper.fDate.dn(value) #" class="ls-add-btn"></a> #} # 
+        #= sv.helper.fDate.dui2(value) # # if (!sv.vm.isTktCmpSig() && value >= sv.helper.fDate.pd().validFrom) {#
+        <a data-role="button" data-icon="add" data-click="sv.vm.add.labor" data-dftdate="#= sv.helper.fDate.dn(value) #" class="ls-add-btn"></a> #} #
     </script>
 
     <script type="text/x-kendo-template" id="tmLabor">
@@ -881,6 +894,12 @@
 
     <script type="text/x-kendo-template" id="tmTechSearch">
         <a>#= Name # <span class="ls-dim">(#= No #)</span></a>
+    </script>
+
+    <script type="text/x-kendo-template" id="tmTechDir">            
+        <a class="ls-detail-btn#= Tel?'':' ls-hidden2'#" data-role="button" href="#= Tel?('tel:'+Tel):'' #" data-icon="phone"></a>
+        <a class="ls-detail-btn#= Tel?'':' ls-hidden2'#" data-role="button" href="#: Tel?('sms://'+Tel+'?body=From '+sv.vm.setting.EmpName):'' #" data-icon="text-a"></a>
+        <a>#= Name # <span class="ls-dim">#= Tel?'('+Tel+')':'' #</span></a>    
     </script>
 
     <script type="text/x-kendo-template" id="tmAct">
@@ -957,7 +976,7 @@
     </script>
 
     <script type="text/x-kendo-template" id="tmImg">
-        <div><input type="text" value="#= Desc #" placeholder="#= !sv.vm.lock.imgAct ? 'enter photo description here...' : 'no photo description' #" class="ls-img-desc" # if (sv.vm.lock.imgAct) {# disabled="disabled"  #} # /></div>
+        <div><input type="text" value="#= Desc #" placeholder="#= !sv.vm.lock.imgAct ? 'enter photo description here...' : 'no photo description' #" class="ls-img-desc" # if (sv.vm.lock.imgAct) {# disabled="disabled" #} # /></div>
         <div data-role="scroller" data-zoom="true" class="ls-img-scroller"><img style="width:100%" src="#= url #" /></div>
     </script>
 
