@@ -10,8 +10,13 @@
   <author href="http://letsos.com" email="jfeng@letsos.com">Jason Feng</author>
   <platform name="ios|android" />
   <access origin="*"/>
+  <allow-intent href="http://*/*" />
+  <allow-intent href="https://*/*" />
+  <allow-intent href="tel:*" />
+  <allow-intent href="sms:*" />
+  <allow-intent href="mailto:*" />
+  <allow-intent href="geo:*" />
   <allow-navigation href="*" />
-  <allow-intent href="*" />
 
   <preference name="phonegap-version" value="cli-5.2.0" />
   <preference name="AutoHideSplashScreen" value="false" />

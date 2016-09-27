@@ -897,8 +897,8 @@
     </script>
 
     <script type="text/x-kendo-template" id="tmTechDir">            
-        <a class="ls-detail-btn#= Tel?'':' ls-hidden2'#" data-role="button" href="#= Tel?('tel:'+Tel):'' #" data-icon="phone"></a>
-        <a class="ls-detail-btn#= Tel?'':' ls-hidden2'#" data-role="button" href="#: Tel?('sms://'+Tel+'?body=From '+sv.vm.setting.EmpName):'' #" data-icon="text-a"></a>
+        <a class="ls-detail-btn#= Tel?'':' ls-hidden2'#" data-role="button" href="#: Tel?('tel:'+Tel):'' #" data-icon="phone"></a>
+        <a class="ls-detail-btn#= Tel?'':' ls-hidden2'#" data-role="button" href="#: Tel?('sms://'+Tel+'?body=From%20'+sv.vm.setting.EmpName)+'%0A':'' #" data-icon="text-a"></a>
         <a>#= Name # <span class="ls-dim">#= Tel?'('+Tel+')':'' #</span></a>    
     </script>
 
