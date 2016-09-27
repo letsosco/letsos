@@ -38,7 +38,7 @@
             <li>
                 OTHER
                 <ul>
-                    <li data-icon="contacts"><a data-bind="click: mainMenu.techDir" data-transition="none">Directory</a></li>
+                    <li data-icon="contacts"><a data-bind="click: mainMenu.techDir">Employee Directory</a></li>
                     <li data-icon="settings"><a href="#vwSetting" data-transition="none">App Settings</a></li>
                 </ul>
             </li>
@@ -80,8 +80,8 @@
                 <span class="k-invalid-msg" data-for="nmAddr"></span>
             </div>
         </header>
-        <div class="ls-tot2" data-bind="invisible: lock.priTech, text: cont.priTech"></div>
-        <div class="ls-tot2" data-bind="invisible: lock.tktOwner, text: cont.tktOwner"></div>
+        <div class="ls-tot2" data-bind="invisible: lock.priTech, html: cont.priTech"></div>
+        <div class="ls-tot2" data-bind="invisible: lock.tktOwner, html: cont.tktOwner"></div>
         <div class="ls-alert" data-bind="visible: lock.invalidJobCc">Invalid job/cost code! Call office ASAP!</div>
         <ul data-role="listview" data-style="inset">
             <li data-bind="invisible: lock.ohcd" id="lnTktType">
@@ -575,7 +575,7 @@
         <ul id="equipSel" data-role="listview" data-template="tmEquipSel" data-style="inset"></ul>
     </div>
 
-    <div id="vwTools" data-role="view" data-title="Tools" data-model="sv.vm" data-init="sv.ui.vwInit" data-show="sv.ui.vwShow" data-level="4" data-transition="none">
+    <div id="vwTools" data-role="view" data-title="Tools" data-model="sv.vm" data-init="sv.ui.vwInit" data-show="sv.ui.vwShow" data-level="4">
         <header data-role="header">
             <div data-role="navbar">
                 <a data-role="button" class="km-back" data-align="left" data-bind="click: save.tools">Back</a>
@@ -586,7 +586,7 @@
         <ul id="toolSel" data-role="listview" data-bind="source: ds.toolsMulti" data-template="tmToolSel" data-header-template="tmToolSelHd" data-filterable="{ field: 'Desc', ignoreCase: true, operator: 'contains' }" data-style="inset"></ul>
     </div>
 
-    <div id="vwLaborsE" data-role="view" data-title="Labors" data-model="sv.vm" data-init="sv.ui.vwInit" data-show="sv.ui.vwShow" data-level="4" data-transition="none">
+    <div id="vwLaborsE" data-role="view" data-title="Labors" data-model="sv.vm" data-init="sv.ui.vwInit" data-show="sv.ui.vwShow" data-level="4">
         <header data-role="header">
             <div data-role="navbar">
                 <a data-role="button" class="km-back" data-align="left" data-bind="click: save.labors">Back</a>
@@ -899,7 +899,7 @@
     <script type="text/x-kendo-template" id="tmTechDir">            
         <a class="ls-detail-btn#= Tel?'':' ls-hidden2'#" data-role="button" data-click="sv.vm.show.telTech" data-icon="phone" data-tel="#: Tel #"></a>
         <a class="ls-detail-btn#= Tel?'':' ls-hidden2'#" data-role="button" data-click="sv.vm.show.smsTech" data-icon="text-a" data-tel="#: Tel #"></a>
-        <a>#= Name # <span class="ls-dim">#= Tel?'('+Tel+')':'' #</span></a>    
+        #= Name # <span class="ls-dim">#= Tel?'('+Tel+')':'' #</span>
     </script>
 
     <script type="text/x-kendo-template" id="tmAct">
