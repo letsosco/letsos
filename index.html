@@ -104,13 +104,13 @@
             </li>
             <li data-bind="visible: isDispJob">
                 <label>
-                    Tel <a data-role="button" data-icon="phone" data-bind="click: show.dial" class="ls-detail-btn"></a>
+                    Tel <a data-role="button" data-icon="phone" data-bind="click: dial.wo" class="ls-detail-btn"></a>
                     <input type="tel" data-bind="value: wo.Tel, disabled: lock.disp" />
                 </label>
             </li>
             <li data-bind="visible: isDispJob">
                 <label>
-                    Rep <a data-role="button" data-icon="phone" data-bind="click: show.dialResp" class="ls-detail-btn"></a>
+                    Rep <a data-role="button" data-icon="phone" data-bind="click: dial.resp" class="ls-detail-btn"></a>
                     <input type="text" data-bind="value: wo.Resp, disabled: lock.disp" maxlength="40" />
                 </label>
             </li>
@@ -265,7 +265,7 @@
                     </li>
                     <li>
                         <label>
-                            Tel <a data-role="button" data-icon="phone" data-bind="click: show.dialSig" class="ls-detail-btn"></a>
+                            Tel <a data-role="button" data-icon="phone" data-bind="click: dial.sig" class="ls-detail-btn"></a>
                             <input name="Tel" type="tel" data-bind="value: wo.SigTel, disabled: isTktCmpSig" />
                         </label>
                     </li>
@@ -756,7 +756,7 @@
                 <a data-role="button" data-align="right" data-click="sv.helper.toTop">To Top</a>
             </div>
         </header>
-        <ul data-role="listview" data-source="sv.vm.ds.techlist" data-template="tmTechDir" data-style="inset" data-filterable="{ field: 'Name', ignoreCase: true, operator: 'contains' }"></ul>
+        <ul id="lstTechDir"></ul>
     </div>
 
     <div id="msgblk"><div></div></div>
@@ -897,9 +897,9 @@
     </script>
 
     <script type="text/x-kendo-template" id="tmTechDir">            
-        <a class="ls-detail-btn#= Tel?'':' ls-hidden2'#" data-role="button" data-click="sv.vm.show.telTech" data-icon="phone" data-tel="#: Tel #"></a>
-        <a class="ls-detail-btn#= Tel?'':' ls-hidden2'#" data-role="button" data-click="sv.vm.show.smsTech" data-icon="text-a" data-tel="#: Tel #"></a>
-        #= Name # <span class="ls-dim">#= Tel?'('+Tel+')':'' #</span>
+        <a class="ls-detail-btn ls-dim" data-role="button" data-click="sv.vm.dial.tech" data-icon="phone" data-tel="#: Tel #"></a>
+        <a class="ls-add-btn ls-dim" data-role="button" data-click="sv.vm.dial.tech" data-icon="sms-a" data-tel="#: Tel #" data-sms="true"></a>
+        #= Name #
     </script>
 
     <script type="text/x-kendo-template" id="tmAct">
