@@ -8,15 +8,7 @@
   <name>Letsos Mobile</name>
   <description>Letsos Company Mobile App</description>
   <author href="http://letsos.com" email="jfeng@letsos.com">Jason Feng</author>
-  <platform name="ios|android" />
-  <access origin="*"/>
-  <allow-navigation href="*" />
-  <allow-intent href="http://*/*" />
-  <allow-intent href="https://*/*" />
-  <allow-intent href="tel:*" />
-  <allow-intent href="sms:*" />
-  <allow-intent href="mailto:*" />
-  <allow-intent href="geo:*" />
+  <platform name="ios|android" /> 
   
   <preference name="phonegap-version" value="cli-5.2.0" />
   <preference name="AutoHideSplashScreen" value="false" />
@@ -33,8 +25,22 @@
   <plugin name="cordova-plugin-splashscreen" spec="3.2.2" />
   <plugin name="cordova-plugin-statusbar" spec="2.1.3" />
   <plugin name="cordova-plugin-webintent2" spec="1.0.1" />
-  <plugin name="cordova-plugin-whitelist" />
+  <plugin name="cordova-plugin-whitelist" spec="1.2.1" />
   <plugin name="phonegap-plugin-push" spec="1.5.3" />
+  
+  <access origin="*"/>
+  <access origin="tel:*" launch-external="yes"/>
+  <access origin="geo:*" launch-external="yes"/>
+  <access origin="mailto:*" launch-external="yes"/>
+  <access origin="sms:*" launch-external="yes"/>
+  <access origin="market:*" launch-external="yes"/>  
+  <allow-navigation href="*" />
+  <allow-intent href="http://*/*" />
+  <allow-intent href="https://*/*" />
+  <allow-intent href="tel:*" />
+  <allow-intent href="sms:*" />
+  <allow-intent href="mailto:*" />
+  <allow-intent href="geo:*" />
   
   <platform name="ios">
     <preference name="iosPersistentFileLocation" value="Library" />
