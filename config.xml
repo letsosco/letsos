@@ -4,7 +4,7 @@
         xmlns:android = "http://schemas.android.com/apk/res/android"        
         id            = "com.letsos.mobile"
         version       = "1.5.14" 
-        versionCode   = "10514">
+        versionCode   = "105149">
   
   <name>Letsos Mobile</name>
   <description>Letsos Company Mobile App</description>
