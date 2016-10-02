@@ -3,8 +3,8 @@
         xmlns:gap     = "http://phonegap.com/ns/1.0"
         xmlns:android = "http://schemas.android.com/apk/res/android"        
         id            = "com.letsos.mobile"
-        version       = "1.52.00" 
-        versionCode   = "105200">
+        version       = "1.52.01" 
+        versionCode   = "105201">
   
   <name>Letsos Mobile</name>
   <description>Letsos Company Mobile App</description>
@@ -34,6 +34,7 @@
 
   <icon src="icon.png" />
   <splash src="splash.png" />
+  
   <platform name="ios">
     <preference name="iosPersistentFileLocation" value="Library" />
     <icon src="res/icon/ios/icon-29.png"    width="29"  height="29" />
