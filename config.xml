@@ -3,8 +3,8 @@
         xmlns:gap     = "http://phonegap.com/ns/1.0"
         xmlns:android = "http://schemas.android.com/apk/res/android"        
         id            = "com.letsos.mobile"
-        version       = "1.52.03" 
-        versionCode   = "105203">
+        version       = "1.52.04" 
+        versionCode   = "105204">
   
   <name>Letsos Mobile</name>
   <description>Letsos Company Mobile App</description>
@@ -19,7 +19,10 @@
   <preference name="SplashScreenDelay" value="10000"/>
   <preference name="FadeSplashScreen" value="false"/>
 
-  <plugin name="cordova-plugin-camera" spec="2.2.0" />
+  <plugin name="cordova-plugin-camera" spec="2.3.0">
+    <variable name="CAMERA_USAGE_DESCRIPTION" value="The app would like to access the camera when you attach photos to content." />
+    <variable name="PHOTOLIBRARY_USAGE_DESCRIPTION" value="The app would like to access the photo library when you attach images to content." />
+  </plugin>
   <plugin name="cordova-plugin-device" spec="1.1.1" />
   <plugin name="cordova-plugin-file" spec="4.1.1" />
   <plugin name="cordova-plugin-file-transfer" spec="1.5.0" />
