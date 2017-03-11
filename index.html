@@ -896,9 +896,19 @@
         <a>#= Name # <span class="ls-dim">(#= No #)</span></a>
     </script>
 
-    <script type="text/x-kendo-template" id="tmTechDir">            
-        <a class="ls-detail-btn ls-dim" data-role="button" data-click="sv.vm.dial.tech" data-icon="phone" data-tel="#: Tel #"></a>
-        <a class="ls-add-btn ls-dim" data-role="button" data-click="sv.vm.dial.tech" data-icon="sms-a" data-tel="#: Tel #" data-sms="true"></a>
+    <script type="text/x-kendo-template" id="tmTechDir">
+        # if (Tel) {#
+            <a class="ls-detail-btn ls-dim" data-role="button" data-click="sv.vm.dial.tech" data-icon="phone" data-tel="#: Tel #"></a>
+            <a class="ls-detail-btn ls-dim" data-role="button" data-click="sv.vm.dial.tech" data-icon="sms-a" data-tel="#: Tel #" data-sms="true"></a>
+        #} else {#
+            <a class="ls-space-btn" data-role="button"></a>
+            <a class="ls-space-btn" data-role="button"></a>
+        #}#
+        # if (Email) {#
+            <a class="ls-add-btn ls-dim" data-role="button" data-click="sv.vm.email.tech" data-icon="email-a" data-email="#: Email #"></a>
+        #} else {#
+            <a class="ls-space-btn" data-role="button"></a>
+        #}#
         #= Name #
     </script>
 
