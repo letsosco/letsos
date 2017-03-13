@@ -81,7 +81,7 @@
     <splash src="res/splash/android/xhdpi-portrait.png" density="xhdpi" />        
   </platform>
 
-  <config-file platform="android" parent="/manifest/application/activity" mode="add">
+  <config-file platform="android" target="AndroidManifest.xml" parent="/manifest/application/activity" mode="add">
     <intent-filter>
       <action android:name="android.intent.action.SEND" />
       <category android:name="android.intent.category.DEFAULT" />
