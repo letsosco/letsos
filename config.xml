@@ -38,7 +38,7 @@
   </plugin>
 
   <icon src="icon.png" />
-  <splash src="splash.png" />
+  <!--<splash src="splash.png" />-->
   
   <platform name="ios">
     <preference name="iosPersistentFileLocation" value="Library" />    
