@@ -78,19 +78,17 @@
     <splash src="res/splash/android/ldpi-portrait.png"  density="ldpi" />
     <splash src="res/splash/android/mdpi-portrait.png"  density="mdpi" />
     <splash src="res/splash/android/hdpi-portrait.png"  density="hdpi" />
-    <splash src="res/splash/android/xhdpi-portrait.png" density="xhdpi" />
-
-    <config-file parent="/manifest/application/activity" mode="add">
-      <intent-filter>
-        <action android:name="android.intent.action.SEND" />
-        <category android:name="android.intent.category.DEFAULT" />
-        <data android:mimeType="image/*" />
-        <data android:mimeType="application/pdf" />
-      </intent-filter>
-    </config-file>
-    
+    <splash src="res/splash/android/xhdpi-portrait.png" density="xhdpi" />     
   </platform>
 
-  
+  <config-file platform="android" parent="/manifest/application/activity" mode="add">
+    <intent-filter>
+      <action android:name="android.intent.action.SEND" />
+      <category android:name="android.intent.category.DEFAULT" />
+      <data android:mimeType="image/*" />
+      <data android:mimeType="application/pdf" />
+      <data android:mimeType="application/vnd.ms-excel" />
+    </intent-filter>
+  </config-file>
   
 </widget>
