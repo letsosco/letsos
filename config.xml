@@ -80,11 +80,13 @@
     <splash src="res/splash/android/hdpi-portrait.png"  density="hdpi" />
     <splash src="res/splash/android/xhdpi-portrait.png" density="xhdpi" />
 
-    <intent-filter>
-      <action android:name="android.intent.action.SEND" />
-      <category android:name="android.intent.category.DEFAULT" />
-      <data android:mimeType="text/plain" />
-    </intent-filter>
+    <config-file target="AndroidManifest.xml" parent="application/activity">
+      <intent-filter>
+        <action android:name="android.intent.action.SEND" />
+        <category android:name="android.intent.category.DEFAULT" />
+        <data android:mimeType="text/plain" />
+      </intent-filter>
+    </config-file>
     
   </platform> 
 </widget>
