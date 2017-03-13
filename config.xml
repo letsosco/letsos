@@ -42,7 +42,7 @@
   
   <platform name="ios">
     <preference name="iosPersistentFileLocation" value="Library" />
-    <icon src="res/icon/ios/icon-29.png"    width="29"  height="29" />
+    <!--<icon src="res/icon/ios/icon-29.png"    width="29"  height="29" />
     <icon src="res/icon/ios/icon-29@2x.png" width="58"  height="58" />
     <icon src="res/icon/ios/icon-40.png"    width="40"  height="40" />
     <icon src="res/icon/ios/icon-40@2x.png" width="80"  height="80" />
@@ -55,7 +55,7 @@
     <icon src="res/icon/ios/icon-72.png"    width="72"  height="72" />
     <icon src="res/icon/ios/icon-72@2x.png" width="144" height="144" />
     <icon src="res/icon/ios/icon-76.png"    width="76"  height="76" />
-    <icon src="res/icon/ios/icon-76@2x.png" width="152" height="152" />
+    <icon src="res/icon/ios/icon-76@2x.png" width="152" height="152" />-->
     <splash src="res/splash/ios/iphone-portrait.png"     width="320"  height="480" />
     <splash src="res/splash/ios/iphone-portrait-2x.png"  width="640"  height="960" />
     <splash src="res/splash/ios/iphone5-portrait-2x.png" width="640"  height="1136" />
@@ -71,10 +71,10 @@
     <preference name="android-targetSdkVersion" value="23" />
     <preference name="StatusBarBackgroundColor" value="#086408" />
     <preference name="AndroidPersistentFileLocation" value="Internal" />
-    <icon src="res/icon/android/xhdpi-96.png" density="xhdpi" />    
+    <!--<icon src="res/icon/android/xhdpi-96.png" density="xhdpi" />    
     <icon src="res/icon/android/ldpi-36.png"  density="ldpi" />
     <icon src="res/icon/android/mdpi-48.png"  density="mdpi" />
-    <icon src="res/icon/android/hdpi-72.png"  density="hdpi" />
+    <icon src="res/icon/android/hdpi-72.png"  density="hdpi" />-->
     <splash src="res/splash/android/ldpi-portrait.png"  density="ldpi" />
     <splash src="res/splash/android/mdpi-portrait.png"  density="mdpi" />
     <splash src="res/splash/android/hdpi-portrait.png"  density="hdpi" />
