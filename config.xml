@@ -3,8 +3,8 @@
         xmlns:gap     = "http://phonegap.com/ns/1.0"
         xmlns:android = "http://schemas.android.com/apk/res/android"        
         id            = "com.letsos.mobile"
-        version       = "1.52.06" 
-        versionCode   = "105206">
+        version       = "1.52.07" 
+        versionCode   = "105207">
   
   <name>Letsos Mobile</name>
   <description>Letsos Company Mobile App</description>
@@ -56,13 +56,16 @@
     <icon src="res/icon/ios/icon-72@2x.png" width="144" height="144" />
     <icon src="res/icon/ios/icon-76.png"    width="76"  height="76" />
     <icon src="res/icon/ios/icon-76@2x.png" width="152" height="152" />
-    <splash src="res/splash/ios/iphone-portrait.png"     width="320"  height="480" />
-    <splash src="res/splash/ios/iphone-portrait-2x.png"  width="640"  height="960" />
-    <splash src="res/splash/ios/iphone5-portrait-2x.png" width="640"  height="1136" />
-    <splash src="res/splash/ios/ipad-portrait.png"       width="768"  height="1024" />
-    <splash src="res/splash/ios/ipad-landscape.png"      width="1024" height="768" />
-    <splash src="res/splash/ios/ipad-portrait-2x.png"    width="1536" height="2048" />
-    <splash src="res/splash/ios/ipad-landscape-2x.png"   width="2048" height="1536" />    
+    <splash src="res/splash/ios/iphone-portrait.png"      width="320"  height="480" />
+    <splash src="res/splash/ios/iphone-portrait-2x.png"   width="640"  height="960" />
+    <splash src="res/splash/ios/iphone5-portrait-2x.png"  width="640"  height="1136" />
+    <splash src="res/splash/ios/iphone6-portrait-2x.png"  width="750"  height="1334" />
+    <splash src="res/splash/ios/iphone6-portrait-3x.png"  width="1242" height="2208" />
+    <splash src="res/splash/ios/iphone6-landscape-3x.png" width="2208" height="1242" />        
+    <splash src="res/splash/ios/ipad-portrait.png"        width="768"  height="1024" />
+    <splash src="res/splash/ios/ipad-landscape.png"       width="1024" height="768" />
+    <splash src="res/splash/ios/ipad-portrait-2x.png"     width="1536" height="2048" />
+    <splash src="res/splash/ios/ipad-landscape-2x.png"    width="2048" height="1536" />    
   </platform>
 
   <platform name="android">
