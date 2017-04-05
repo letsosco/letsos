@@ -60,8 +60,7 @@
     <splash src="res/splash/ios/iphone-portrait-2x.png"   width="640"  height="960" />
     <splash src="res/splash/ios/iphone5-portrait-2x.png"  width="640"  height="1136" />
     <splash src="res/splash/ios/iphone6-portrait-2x.png"  width="750"  height="1334" />
-    <splash src="res/splash/ios/iphone6-portrait-3x.png"  width="1242" height="2208" />
-    <splash src="res/splash/ios/iphone6-landscape-3x.png" width="2208" height="1242" />        
+    <splash src="res/splash/ios/iphone6p-portrait-3x.png" width="1242" height="2208" />
     <splash src="res/splash/ios/ipad-portrait.png"        width="768"  height="1024" />
     <splash src="res/splash/ios/ipad-landscape.png"       width="1024" height="768" />
     <splash src="res/splash/ios/ipad-portrait-2x.png"     width="1536" height="2048" />
